@@ -1,3 +1,27 @@
-# 22-2-machine-learning-deep-learning
+# 22 Fall ML/DL Intermeidate Seminar
 
-test
+## Where
+
+- 관정 Group Study Room
+- ZOOM 
+
+
+## When
+
+
+- **Tuesday** 20:30
+
+
+## Zoom Link
+
+- [CLICK! JOIN RIGHT NOW!!!](https://snu-ac-kr.zoom.us/j/97693886429?pwd=N2FmemwvM3prQzExYnc0VlptdVpGUT09)
+
+
+## This Week's Seminar
+<br />
+
+- **머신러닝과 통계적 추론**
+
+- **Understanding Contrastive Machine Learning - CVAE**
+
+- **파이토치 메모리 슈퍼세이브**
