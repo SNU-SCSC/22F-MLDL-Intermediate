@@ -19,4 +19,4 @@
 
 ## Zoom Link
 
-- [CLICK! JOIN RIGHT NOW!!!](https://snu-ac-kr.zoom.us/j/97693886429?pwd=N2FmemwvM3prQzExYnc0VlptdVpGUT09)
+- [CLICK! JOIN RIGHT NOW!!!](https://snu-ac-kr.zoom.us/j/8996775094?pwd=akhCMDZPRnR3VisrcFNvU20rbFpUdz09)
