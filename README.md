@@ -1,5 +1,7 @@
 # 2022년도 2학기 머신러닝/딥러닝 중급 SIG
 
+[![Github Pages](https://github.com/SNU-SCSC/22F-MLDL-Intermediate/actions/workflows/gh-pages.yml/badge.svg?branch=gh-pages-src)](https://github.com/SNU-SCSC/22F-MLDL-Intermediate/actions/workflows/gh-pages.yml)
+
 - [2022년도 2학기 머신러닝/딥러닝 중급 SIG](#2022년도-2학기-머신러닝딥러닝-중급-sig)
   - [소개](#소개)
     - [진행](#진행)
