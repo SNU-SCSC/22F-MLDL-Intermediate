@@ -7,3 +7,4 @@ draft: false
 images: ["cover.png"]
 ---
 
+2022년 10월 11일에 진행된 세미나입니다.

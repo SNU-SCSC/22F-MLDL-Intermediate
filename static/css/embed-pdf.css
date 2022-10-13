@@ -17,13 +17,13 @@
 }
 
 .pdf-slide {
-  padding-top: 75%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
+  padding-top: 77%; /* 4:3 Aspect Ratio (divide 3 by 4 = 0.75) */
 }
 
 .pdf-wide-slide {
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  padding-top: 58.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
 .pdf-document {
-  padding-top: 150%;
+  padding-top: 152%;
 }

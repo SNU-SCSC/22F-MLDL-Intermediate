@@ -6,7 +6,6 @@ document.getElementById('shortRandom').addEventListener('click', sendToRandomArt
 document.getElementById('longRandom').addEventListener('click', sendToRandomArticle);
 
 function sendToRandomArticle() {
-  console.log("hello");
   fetch(json_path)
   .then((response) => response.json())
   .then((data) => {

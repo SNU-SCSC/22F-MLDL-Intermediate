@@ -55,7 +55,7 @@
   url = "https://github.com/SNU-SCSC/22F-MLDL-Intermediate"
   weight = 10
 
-[[footer]]
-  name = "Privacy"
-  url = "/privacy-policy/"
-  weight = 10
+# [[footer]]
+#   name = "Privacy"
+#   url = "/privacy-policy/"
+#   weight = 10
