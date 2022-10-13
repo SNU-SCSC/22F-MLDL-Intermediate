@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://SNU-SCSC.github.io/22F-MLDL-Intermediate/sitemap.xml
