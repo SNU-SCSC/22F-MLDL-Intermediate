@@ -5,6 +5,9 @@
 @import "common/variables";
 
 /** Import Bootstrap */
+$primary: $trans-blue;
+$secondary: $trans-pink;
+
 @import "bootstrap/scss/bootstrap";
 
 /** Import highlight.js */

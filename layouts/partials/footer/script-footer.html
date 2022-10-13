@@ -71,6 +71,15 @@
   {{ $slice = $slice | append $toTopButton -}}
 {{ end -}}
 
+{{ $shareTwitterButton := resources.Get "js/twitter-share.js" -}}
+{{ $shareTwitterButton := $shareTwitterButton | js.Build -}}
+{{ $slice = $slice | append $shareTwitterButton -}}
+
+{{ $toRandomButton := resources.Get "js/to-random.js" -}}
+{{ $toRandomButton := $toRandomButton | resources.ExecuteAsTemplate "to-random.js" . -}}
+{{ $toRandomButton := $toRandomButton | js.Build -}}
+{{ $slice = $slice | append $toRandomButton -}}
+
 {{ $js := $slice | resources.Concat "main.js" -}}
 
 {{ if eq (hugo.Environment) "development" -}}

@@ -1,0 +1,26 @@
+- id: get-started
+  translation: "시작하기"
+
+- id: on-this-page
+  translation: "목차"
+
+- id: search-text
+  translation: "검색..."
+
+- id: 404-title
+  translation: "페이지를 찾을 수 없습니다 :("
+
+- id: 404-text
+  translation: "당신이 찾는 페이지는 삭제되었거나 옮겨졌습니다"
+
+- id: browse
+  translation: "둘러보기"
+
+- id: speakers
+  translation: "발표자"
+
+- id: contributors
+  translation: "기여자"
+
+- id: no_result
+  translation: "검색 결과 없음:"

@@ -1,159 +1,77 @@
-<p align="center">
-  <a href="https://getdoks.org/">
-    <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60">
-  </a>
-</p>
+# 2022년도 2학기 머신러닝/딥러닝 중급 SIG
 
-<h1 align="center">
-  Doks
-</h1>
+- [2022년도 2학기 머신러닝/딥러닝 중급 SIG](#2022년도-2학기-머신러닝딥러닝-중급-sig)
+  - [소개](#소개)
+    - [진행](#진행)
+    - [Zoom Link](#zoom-link)
+    - [규칙](#규칙)
+    - [주제](#주제)
+  - [구성원](#구성원)
+  - [일정](#일정)
+  - [홈페이지](#홈페이지)
+  - [공지사항](#공지사항)
 
-<h3 align="center">
-  Modern Documentation Theme
-</h3>
+## 소개
 
-<p align="center">
-  Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize.
-</p>
+SCSC 2022년도 2학기 머신러닝/딥러닝 중급 SIG
 
-<p align="center">
-  <a href="https://github.com/h-enk/doks/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/h-enk/doks?style=flat-square" alt="GitHub">
-  </a>
-  <a href="https://github.com/h-enk/doks/releases">
-    <img src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
-  </a>
-  <a href="https://www.npmjs.com/package/@hyas/doks">
-    <img src="https://img.shields.io/npm/v/@hyas/doks?style=flat-square" alt="npm (scoped)">
-  </a>
-  <a href="https://github.com/h-enk/doks/actions?query=workflow%3A%22Hyas+CI%22">
-    <img src="https://img.shields.io/github/workflow/status/h-enk/doks/Hyas%20CI/master?style=flat-square" alt="GitHub Workflow Status (branch)">
-  </a>
-  <a href="https://app.netlify.com/sites/doks/deploys">
-    <img src="https://img.shields.io/netlify/8a1009d5-88ac-413e-96ef-3f928674a083?style=flat-square" alt="Netlify">
-  </a>
-</p>
+### 진행
 
-![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/doks.png)
+- 매주 화요일 8시 반 관정도서관 그룹스터디룸 + 줌 (하이브리드), 세부사항은 아래 [일정](#일정) 참고
+- 한 세미나에 3분 씩, 한 학기 동안 총 2번의 발표
+- SCSC 회원에게도 공개
 
-## Demo
+### Zoom Link
 
-- [doks.netlify.app](https://doks.netlify.app/)
+- [CLICK! JOIN RIGHT NOW!!!](https://snu-ac-kr.zoom.us/j/8996775094?pwd=akhCMDZPRnR3VisrcFNvU20rbFpUdz09)
+- Or Just...
+  - [회의 ID] 899 677 5094
+  - [암호] qzPN4j or 822456
 
-## Why Doks?
+### 규칙
 
-Nine main reasons why you should use Doks:
+- 대면 참여해주시면 좋다
+- 세미나 20분 정도 준비해오기 (더 짧아도 됨)
 
-1. __Security aware__. Get A+ scores on [Mozilla Observatory](https://observatory.mozilla.org/analyze/doks.netlify.app) out of the box. Easily change the default Security Headers to suit your needs.
+### 주제
 
-2. __Fast by default__. Get 100 scores on [Google Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?gist=59aafe464a68f8bc30b8e9a636d5b053) by default. Doks removes unused css, prefetches links, and lazy loads images.
+- 자유 주제, 주제 선택에 어려움이 있을 경우 <딥러닝의 최신 트렌드 (추형석)>의 목차 참고
+- 학술적인 내용이 아닌 스타트업이나 ML/DL 관련 프로덕트들도 좋음
 
-3. __SEO-ready__. Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.
+## 구성원
 
-4. __Development tools__. Code with confidence. Check styles, scripts, and markdown for errors and fix automatically or manually.
+- [김윤식](https://github.com/yoonshik1205)
+- [이경원](https://github.com/kw-lee)
+- [최필립](https://github.com/pswcsj)
+- [유상훈](https://github.com/sanghoonnam)
+- [**최민동**](https://github.com/orange-fritters)
+- [임서영](https://github.com/xxbelight)
+- [최재영](https://github.com/Jaeyoung-Choi)
+- [구진모](https://github.com/linear0127)
 
-5. __Bootstrap framework__. Build robust, flexible, and intuitive websites with Bootstrap 5. Easily customize your Doks site with the source Sass files.
+## 일정
 
-6. __Netlify-ready__. Deploy to Netlify with sensible defaults. Easily use Netlify Functions, Netlify Redirects, and Netlify Headers.
+| 주  | 일시             | 장소             |  발표자 및 주제                                                                                                                         |
+| --- | ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 0   | 2022년 10월 4일  | 관정도서관 216호 | 진행 회의                                                                                                                               |
+| 1   | 2022년 10월 11일 | 관정도서관 216호 | 최민동: "파이토치 메모리 슈퍼세이브"<br>임서영: "Understanding Contrastive Machine Learning - CVAE"<br>이경원: "머신러닝과 통계적 추론" |
+| 2   | 2022년 11월 1일  | TBA              | TBA                                                                                                                                     |
+| 3   | 2022년 11월 8일  | TBA              | TBA                                                                                                                                     |
+| 4   | 2022년 11월 15일 | TBA              | TBA                                                                                                                                     |
+| 5   | TBA              | TBA              | TBA                                                                                                                                     |
+| 6   | TBA              | TBA              | TBA                                                                                                                                     |
 
-7. __Full text search__. Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.
+## 홈페이지
 
-8. __Page layouts__. Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.
+* 홈페이지 주소는 [https://SNU-SCSC.github.io/22F-MLDL-intermediate/](https://SNU-SCSC.github.io/22F-MLDL-intermediate/) 입니다.
+* 소스코드는 `gh-pages-src` 브랜치에서 관리됩니다.
+* hugo [doks template](https://github.com/h-enk/doks)에 기반하여 작성됩니다.
+* 참고하면 좋은 문서:
+  * hugo 관련: [hugo documentation](https://gohugo.io/documentation/)
+  * doks 관련: [doks documentation](https://getdoks.org)
+  * html, css, javascript 관련: [w3schools](https://www.w3schools.com)
+  * 기타 모든 것: [https://google.com](https://google.com)
 
-9. __Dark mode__. Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.
+## 공지사항
 
-### Other features
-
-- __Multilingual and i18n__ support
-- __Versioning__ documentation support
-- __KaTeX__ math typesetting
-- __Mermaid__ diagrams and visualization
-- __highlight.js__ syntax highlighting
-
-## Requirements
-
-- [Git](https://git-scm.com/) — latest source release
-- [Node.js](https://nodejs.org/) — latest LTS version or newer
-
-<details>
-<summary>Why Node.js?</summary>
-
-Doks uses npm (included with Node.js) to centralize dependency management, making it [easy to update](https://getdoks.org/docs/help/how-to-update/) resources, build tooling, plugins, and build scripts.
-
-</details>
-
-## Get started
-
-Start a new Doks project in three steps:
-
-### 1. Create a new site
-
-Doks is available as a child theme and a starter theme.
-
-#### Child theme
-
-- Intended for novice to intermediate users
-- Intended for minor customizations
-- [Easily update npm packages](https://getdoks.org/docs/help/how-to-update/) — __including__ [Doks](https://www.npmjs.com/package/@hyas/doks)
-
-```bash
-git clone https://github.com/h-enk/doks-child-theme.git my-doks-site && cd my-doks-site
-```
-
-#### Starter theme
-
-- Intended for intermediate to advanced users
-- Intended for major customizations
-- [Easily update npm packages](https://getdoks.org/docs/help/how-to-update/)
-
-```bash
-git clone https://github.com/h-enk/doks.git my-doks-site && cd my-doks-site
-```
-
-<details>
-<summary>Help me choose</summary>
-
-Not sure which one is for you? Pick the child theme.
-
-</details>
-
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Start development server
-
-```bash
-npm run start
-```
-
-## Other commands
-
-Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for common tasks.
-
-## Documentation
-
-- [Netlify](https://docs.netlify.com/)
-- [Hugo](https://gohugo.io/documentation/)
-- [Doks](https://getdoks.org/)
-
-## Communities
-
-- [Netlify Community](https://community.netlify.com/)
-- [Hugo Forums](https://discourse.gohugo.io/)
-- [Doks Discussions](https://github.com/h-enk/doks/discussions)
-
-## Sponsors
-
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
-
-[![OC sponsor 0](https://opencollective.com/doks/tiers/sponsor/0/avatar.svg)](https://opencollective.com/doks/tiers/sponsor/0/website)
-[![OC sponsor 1](https://opencollective.com/doks/tiers/sponsor/1/avatar.svg)](https://opencollective.com/doks/tiers/sponsor/1/website)
-
-## Backers
-
-Support this project by becoming a backer. Your avatar will show up here.
-
-[![Backers](https://opencollective.com/doks/tiers/backer.svg?49741992)](https://opencollective.com/doks)
+- 10월 18일, 25일은 중간고사 일정으로 세미나를 진행하지 않습니다.

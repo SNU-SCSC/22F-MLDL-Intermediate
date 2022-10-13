@@ -1,4 +1,15 @@
 {{ define "main" }}
+{{ $people := slice }}
+{{ $contribute_type := slice }}
+{{ range $index, $contributor := .Params.contributors }}
+{{ $people = $people | append $contributor }}
+{{ $contribute_type = $contribute_type | append "contributors" }}
+{{ end }}
+{{ range $index, $speaker := .Params.speakers }}
+{{ $people = $people | append $speaker }}
+{{ $contribute_type = $contribute_type | append "speakers" }}
+{{ end }}
+{{ $last := sub (len $people) 2 }}
 	<div class="row flex-xl-nowrap">
 		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne .Site.Params.options.navbarSticky true }} docs-sidebar-top{{ end }} d-none d-lg-block">
 			<nav {{ if eq .Site.Params.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
@@ -25,7 +36,22 @@
 				</nav>
 			{{ end }}
 			<h1>{{ .Title }}</h1>
-			<p class="lead">{{ .Params.lead | safeHTML }}</p>
+      <div align="right" class="meta-item">
+        {{ if .Params.tags }}
+        <span>
+        {{ range $index, $tag := .Params.tags }}
+        <a href="{{ "tags/" | relURL}}{{ . | urlize }}">#{{ $tag }}</a>
+        {{ end }}
+        </span></br>
+        {{ end }}
+        <span>
+        {{ range $index, $contributor := $people }}
+        <a href="{{ print (index $contribute_type $index) "/" | relURL }}{{ $contributor }}">{{ $contributor }}</a>{{ if and (ge $index 0) (le $index $last) }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end }}{{ end }}
+        </span></br>
+        <span>{{ .PublishDate.Format "January 2, 2006" }}</span>
+      </div>
+
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
 			{{ if ne .Params.toc false -}}
 			<nav class="d-xl-none" aria-label="Quaternary navigation">
 				{{ partial "sidebar/docs-toc.html" . }}

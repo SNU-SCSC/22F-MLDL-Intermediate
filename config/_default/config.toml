@@ -1,21 +1,24 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "https://SNU-SCSC.github.io/22F-MLDL-Intermediate"
 canonifyURLs = false
+RelativeURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
 enableGitInfo = false
 enableRobotsTXT = true
-paginate = 7
+paginate = 12
 rssLimit = 10
 
 # Multilingual
-defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
-# defaultContentLanguageInSubdir = true
+defaultContentLanguage = "ko"
+disableLanguages = ["de", "nl", "en"]
+defaultContentLanguageInSubdir = false
+
+googleAnalytics = ''
 
 # add redirects/headers
 [outputs]
-home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
+home = ["HTML", "RSS", "REDIRECTS", "HEADERS", "json"]
 section = ["HTML", "RSS", "SITEMAP"]
 
 # remove .{ext} from text/netlify
@@ -57,9 +60,11 @@ rel  = "sitemap"
   priority = 0.5
 
 [taxonomies]
-  contributor = "contributors"
+  people = "people"
   category = "categories"
   tag = "tags"
+  speaker = "speakers"
+  contributor = "contributors"
 
 [permalinks]
   blog = "/blog/:title/"

@@ -1,0 +1,65 @@
+{{ define "main" }}
+	<div class="row flex-xl-nowrap">
+		<div class="col-lg-5 col-xl-4 docs-sidebar{{ if ne .Site.Params.options.navbarSticky true }} docs-sidebar-top{{ end }} d-none d-lg-block">
+			<nav {{ if eq .Site.Params.menu.section.collapsibleSidebar false }}id="sidebar-default" {{ end }}class="docs-links" aria-label="Main navigation">
+				{{ partial "sidebar/docs-menu.html" . }}
+			</nav>
+		</div>
+		{{ if ne .Params.toc false -}}
+		<nav class="docs-toc{{ if ne .Site.Params.options.navbarSticky true }} docs-toc-top{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			{{ partial "sidebar/docs-toc.html" . }}
+		</nav>
+		{{ end -}}
+		{{ if .Params.toc -}}
+		<main class="docs-content col-lg-11 col-xl{{ if eq .Site.Params.options.fullWidth false }}-9{{ end }}">
+		{{ else -}}
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		{{ end -}}
+			{{ if .Site.Params.options.breadCrumb -}}
+				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						{{ partial "main/breadcrumb" . -}}
+						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+					</ol>
+				</nav>
+			{{ end }}
+
+      <h1 class="text-center">
+        {{.Title}}
+      </h1>
+
+      {{ if eq .Parent.Section "seminar" }}
+      <div>
+        <ul>
+          {{ if .Params.contributors }}<li>{{ i18n "contributors" }}:
+            {{ $last := sub (len .Params.contributors) 2 }}
+            {{ range $index, $contributor := .Params.contributors }}
+            <a href="{{ "contributors/" | relURL }}{{ . | urlize }}">{{ $contributor }}</a>{{ if and (ge $index 0) (le $index $last) }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end }}{{ end }}</li>
+            {{ end }}
+          {{ if .Params.speakers }}<li>{{ i18n "speakers" }}:
+            {{ $last := sub (len .Params.speakers) 2 }}
+            {{ range $index, $speaker := .Params.speakers }}
+            <a href="{{ "speakers/" | relURL }}{{ . | urlize }}">{{ $speaker }}</a>{{ if and (ge $index 0) (le $index $last) }}{{ if eq $index $last }} and {{ else }}, {{ end }}{{ end }}{{ end }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+      <div class="text-center">{{ .Content }}</div>
+      <div class="card-list">
+        {{ $currentSection := .CurrentSection }}
+        {{ $subpages := .Pages.ByWeight }}
+        {{ range where $subpages "Section" .Section }}
+          {{ if in (.RelPermalink | string) $currentSection.RelPermalink }}
+            <div class="card my-3">
+              <div class="card-body">
+                <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+		</main>
+	</div>
+{{ end }}

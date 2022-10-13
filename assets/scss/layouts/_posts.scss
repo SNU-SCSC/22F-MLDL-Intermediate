@@ -1,8 +1,12 @@
 .home .card,
-.contributors.list .card,
+.people .list .card,
+.contributors .list .card,
+.speakers .list .card,
 .blog.list .card,
 .blog.single .card,
 .categories.list .card,
+.docs.list .card,
+.docs.single .card,
 .tags.list .card {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -10,22 +14,31 @@
 }
 
 .home .card:hover,
-.contributors.list .card:hover,
+.people .list .card:hover,
+.contributors .list .card:hover,
+.speakers .list .card:hover,
 .blog.list .card:hover,
 .blog.single .card:hover,
 .categories.list .card:hover,
+.docs.list .card:hover,
+.docs.single .card:hover,
 .tags.list .card:hover {
   transform: scale(1.025);
 }
 
-.contributors.list .card.card-terms:hover,
+.people .list .card.card-terms:hover,
+.contributors .list .card.card-terms:hover,
+.speakers .list .card.card-terms:hover,
 .categories.list .card.card-terms:hover,
+.docs.list .card.card-terms:hover,
 .tags.list .card.card-terms:hover {
   transform: none;
 }
 
 .home .card-body,
-.contributors.list .card-body,
+.people .list .card-body,
+.contributors .list .card-body,
+.speakers .list .card-body,
 .blog.list .card-body,
 .blog.single .card-body,
 .categories.list .card-body,
@@ -33,7 +46,9 @@
   padding: 0 2rem 1rem;
 }
 
-.contributors.list .card-terms .card-body,
+.people .list .card-terms .card-body,
+.contributors .list .card-terms .card-body,
+.speakers .list .card-terms .card-body,
 .categories.list .card-terms .card-body,
 .tags.list .card-terms .card-body {
   padding: 1rem;

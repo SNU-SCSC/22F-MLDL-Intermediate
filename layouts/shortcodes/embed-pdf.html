@@ -1,0 +1,11 @@
+{{ $baseURL := .Site.BaseURL | absURL -}}
+{{ $fileURL := .Get "url" }}
+{{ $pdfType := .Get "type" }}
+{{ $ratio := .Get "ratio" }}
+<link rel="stylesheet" type="text/css" href="{{ print $baseURL "/css/embed-pdf.css" }}">
+
+<!-- ratio: xx% = height / width -->
+
+<div class="pdf-container {{ $pdfType }}" {{ if $ratio }}style="padding-top: {{ $ratio }};"{{ end }}>
+  <iframe src='{{ print $baseURL $fileURL }}' class='responsive-iframe' type="application/pdf" style="width:100%;"></iframe>
+</div>

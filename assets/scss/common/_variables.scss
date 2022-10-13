@@ -20,14 +20,27 @@ $beige:    #fbf7f0;
 $purple:   #5d2f86;
 $brown:    #aa9c84;
 
-$blue-300: #8ed6fb;
+$trans-blue: #5bcefa;
+$trans-pink: #f5a9b8;
+$trans-blue-for-light: #0685b6; // darken(#5bcefa, 30%);
+$trans-pink-for-light: #ea4e6d; // darken($trans-pink, 20%);
 $pink-100: #fcfaff;
 $pink-500: #d32e9d;
 
-$primary: $purple;
+$pride: linear-gradient(
+  to right,
+  #fe0000,
+  #fd8c00,
+  #ffe500,
+  #119f0b,
+  #0644b3,
+  #c22edc
+);
 
-$color-btn-bg: $pink-500;
-$color-btn-border: darken($pink-500, 5%);
+$primary: $trans-blue-for-light;
+
+$color-btn-bg: $trans-blue-for-light;
+$color-btn-border: darken($trans-blue-for-light, 5%);
 $color-btn-text: $white;
 
 // Options

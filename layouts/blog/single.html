@@ -7,18 +7,23 @@
       {{ partial "main/blog-meta.html" . }}
     </div>
   </div>
-  <div class="col-md-13">
+  <!-- <div class="col-md-13">
     <div>
       {{- .Scratch.Set "fillImage" "1270x715 Center" -}}
       {{ partial "content/figure.html" . }}
     </div>
-  </div>
+  </div> -->
+  {{ if ne .Params.toc false -}}
+  <nav class="docs-toc{{ if ne .Site.Params.options.navbarSticky true }} docs-toc-top{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+    {{ partial "sidebar/docs-toc.html" . }}
+  </nav>
+  {{ end -}}
   <div class="col-md-12 col-lg-9">
     {{ .Content }}
     {{ if .Params.tags -}}
     <div class="mt-4">
       {{ range $index, $tag := .Params.tags -}}
-        <a class="btn btn-light" href="{{ "/tags/" | absURL }}{{ . | urlize }}/" role="button">{{ . }}</a>
+        <a class="btn btn-light" href="{{ "tags/" | absURL }}{{ . | urlize }}/" role="button">{{ . }}</a>
       {{ end -}}
     </div>
     {{ end -}}

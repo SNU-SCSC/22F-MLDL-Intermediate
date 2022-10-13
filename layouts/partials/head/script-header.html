@@ -6,3 +6,10 @@
   {{ $alertInit := resources.Get "js/alert-init.js" | js.Build | minify -}}
   <script>{{ $alertInit.Content | safeJS }}</script>
 {{- end -}}
+{{- if .Site.GoogleAnalytics -}}
+  <!-- Global Site Tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+  {{ $GA := resources.Get "js/google-analytics.js" | resources.ExecuteAsTemplate "js/ga.js" . -}}
+  {{ $GA := $GA | minify | fingerprint "sha512" -}}
+  <script src="{{ $GA.RelPermalink }}" integrity="{{ $GA.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{- end -}}

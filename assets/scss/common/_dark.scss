@@ -11,8 +11,9 @@ $border-dark: darken($body-bg-dark, 2.5%);
 $border-dark: $gray-800;
 $body-color-dark: $gray-300;
 $dots-dark: darken($body-color-dark, 50%);
+$focus-bg-dark: lighten($body-bg-dark, 2.5%);
 
-$link-color-dark: $blue-300;
+$link-color-dark: $trans-blue;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 
@@ -579,4 +580,53 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $link-color-dark;
   background: $body-overlay-dark;
   border: 1px solid $body-overlay-dark;
+}
+
+[data-dark-mode] .twitter-tweet,
+[data-dark-mode] .twitter-tweet-rendered {
+  background-color: $body-bg-dark !important;
+}
+
+[data-dark-mode] .blockquote-custom-icon {
+  background-color: $trans-pink-for-light !important;
+  color: #fff;
+}
+
+[data-dark-mode] #suggestions {
+  background-color: $body-bg-dark !important;
+  color: $body-color-dark;
+  border-top-color: $border-dark;
+}
+
+[data-dark-mode] #suggestions a:focus {
+  background: $focus-bg-dark;
+  border-top-color: $border-dark;
+  outline: 0;
+}
+
+[data-dark-mode] #suggestions a:hover {
+  background: $focus-bg-dark;
+  border-top-color: $border-dark;
+}
+
+[data-dark-mode] .suggestion__title {
+  color: $body-color-dark;
+}
+
+[data-dark-mode] .suggestion__description,
+[data-dark-mode] .suggestion__no-results {
+  color: $body-color-dark;
+}
+
+[data-dark-mode] .main-gate {
+  background-image: $pride;
+  background-color: $body-bg-dark !important;
+
+  --bs-btn-bg: $body-bg-dark !important;
+  --bs-btn-border-color: $body-bg-dark !important;
+  --bs-btn-hover-border-color: $body-bg-dark !important;
+  --bs-btn-active-bg: $body-bg-dark !important;
+  --bs-btn-active-border-color: $body-bg-dark !important;
+  --bs-btn-disabled-bg: $body-bg-dark !important;
+  --bs-btn-disabled-border-color: $body-bg-dark !important;
 }

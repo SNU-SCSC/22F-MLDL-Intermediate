@@ -1,16 +1,23 @@
 <!doctype html>
 <html lang="{{ .Site.Params.languageTag | default "en-US" }}">
+  {{ $type := .Type }}
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
   {{ else if eq .Kind "404" -}}
     {{ .Scratch.Set "class" "error404" -}}
   {{ else if eq .Kind "page" -}}
-    {{ .Scratch.Set "class" .Type -}}
+    {{ .Scratch.Set "class" $type -}}
     {{ .Scratch.Add "class" " single" -}}
+    {{ if or (eq $type "contributors") (eq $type "speakers") }}
+    {{ .Scratch.Add "class" " people" -}}
+    {{ end }}
   {{ else -}}
-    {{ .Scratch.Set "class" .Type -}}
+    {{ .Scratch.Set "class" $type -}}
     {{ .Scratch.Add "class" " list" -}}
+    {{ if or (eq $type "contributors") (eq $type "speakers")}}
+    {{ .Scratch.Add "class" " people" -}}
+    {{ end }}
   {{ end -}}
   <body class="{{ .Scratch.Get "class" }}"{{ if eq .Site.Params.options.scrollSpy true }} data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -90%" data-bs-smooth-scroll="true" tabindex="0"{{ end }}>
     {{ partial "header/header.html" . }}

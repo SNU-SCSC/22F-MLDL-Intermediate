@@ -3,7 +3,13 @@
 <meta name="twitter:creator" content="{{ .Site.Params.twitterCreator }}">
 <meta name="twitter:title" content="{{ .Title }}">
 <meta name="twitter:description" content="{{ .Description }}">
-{{ with $.Params.images -}}
+
+{{ $images := slice "cover.png" }}
+{{ if $.Params.images }}
+{{ $images = $images | append $.Params.images }}
+{{ end }}
+
+{{ with $images -}}
   <meta name="twitter:image" content="{{ $.Permalink }}{{ index . 0 }}">
 {{ else -}}
   {{ $images := $.Resources.ByType "image" -}}

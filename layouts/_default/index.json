@@ -1,5 +1,7 @@
 {{- $.Scratch.Add "index" slice -}}
 {{- range .Site.RegularPages -}}
-  {{- $.Scratch.Add "index" (dict "title" .Title "description" .Params.description "contents" .Plain "RelPermalink" .RelPermalink) -}}
+  {{ if or (eq .Section "seminar") (eq .Section "docs") }}
+    {{- $.Scratch.Add "index" (dict "title" .Title "description" .Params.description "RelPermalink" .RelPermalink) -}}
+  {{ end }}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

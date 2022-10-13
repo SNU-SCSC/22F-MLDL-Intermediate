@@ -64,16 +64,30 @@ Source:
 (function(){
 
   var index = new FlexSearch.Document({
-    tokenize: "forward",
     cache: 100,
     document: {
       id: 'id',
       store: [
-        "href", "title", "description"
+        "href", "title", "description", "content"
       ],
-      index: ["title", "description", "content"]
-    }
+      index: ["title", "description", "content"],
+    },
+    encode: false,
+    tokenize: str => str.replace(/[\x00-\x7F]/g, "").split("")
   });
+
+  var index_en = new FlexSearch.Document({
+    language: "en",
+    cache: 100,
+    document: {
+      id: 'id',
+      store: [
+        "href", "title", "description", "content", "tags", "contributors", "speakers"
+      ],
+      index: ["title", "description", "content", "tags", "contributors", "speakers"],
+    },
+    tokenize: "forward"
+  })
 
 
   // Not yet supported: https://github.com/nextapps-de/flexsearch#complex-documents
@@ -105,7 +119,7 @@ Source:
   {{- end }}
   {{- end }}
   {{- else }}
-  {{- $list = (where .Site.Pages "Section" "docs") }}
+  {{- $list = (where .Site.Pages "Section" "seminar") }}
   {{- end }}
 
   {{ $len := (len $list) -}}
@@ -114,8 +128,27 @@ Source:
     index.add(
       {
         id: {{ $index }},
-        href: "{{ .RelPermalink }}",
+        href: "{{ .Permalink }}",
         title: {{ .Title | jsonify }},
+        tags: {{ .Params.tags | jsonify }},
+        contributors: {{ .Params.contributors | jsonify }},
+        speakers: {{ .Params.speakers | jsonify }},
+        {{ with .Description -}}
+          description: {{ . | jsonify }},
+        {{ else -}}
+          description: {{ .Summary | plainify | jsonify }},
+        {{ end -}}
+        content: {{ .Plain | jsonify }}
+      }
+    );
+    index_en.add(
+      {
+        id: {{ $index }},
+        href: "{{ .Permalink }}",
+        title: {{ .Title | jsonify }},
+        tags: {{ .Params.tags | jsonify }},
+        contributors: {{ .Params.contributors | jsonify }},
+        speakers: {{ .Params.speakers | jsonify }},
         {{ with .Description -}}
           description: {{ . | jsonify }},
         {{ else -}}
@@ -129,12 +162,17 @@ Source:
   search.addEventListener('input', show_results, true);
 
   function show_results(){
-    const maxResult = 5;
+    const maxResult = 100;
     var searchQuery = this.value;
-    var results = index.search(searchQuery, {limit: maxResult, enrich: true});
+    const results_en = index_en.search(
+      searchQuery, {limit: maxResult, enrich: true})
+    const results_o = index.search(searchQuery, {limit: maxResult, enrich: true});
+
+    const results = results_en.concat(results_o);
 
     // flatten results since index.search() returns results for each indexed field
     const flatResults = new Map(); // keyed by href to dedupe results
+
     for (const result of results.flatMap(r => r.result)) {
       if (flatResults.has(result.doc.href)) continue;
       flatResults.set(result.doc.href, result.doc);
@@ -143,31 +181,47 @@ Source:
     suggestions.innerHTML = "";
     suggestions.classList.remove('d-none');
 
+    const regex = new RegExp(searchQuery.split(/\s+/).filter((i) => i?.length).join("|"), 'gi')
+    const regex_scope = new RegExp(".{0,15}" + searchQuery.split(/\s+/).filter((i) => i?.length).join("|") + ".{0,15}\.", 'gi');
+
     // inform user that no results were found
     if (flatResults.size === 0 && searchQuery) {
       const noResultsMessage = document.createElement('div')
-      noResultsMessage.innerHTML = `No results for "<strong>${searchQuery}</strong>"`
+      noResultsMessage.innerHTML = `{{ i18n "no_result" }} "<strong>${searchQuery}</strong>"`
       noResultsMessage.classList.add("suggestion__no-results");
       suggestions.appendChild(noResultsMessage);
       return;
     }
 
     // construct a list of suggestions
-    for(const [href, doc] of flatResults) {
+    for (const [href, doc] of flatResults) {
         const entry = document.createElement('div');
+        entry.classList.add("suggestion__result");
         suggestions.appendChild(entry);
 
         const a = document.createElement('a');
         a.href = href;
         entry.appendChild(a);
 
-        const title = document.createElement('span');
+        const title = document.createElement('div');
         title.textContent = doc.title;
         title.classList.add("suggestion__title");
         a.appendChild(title);
 
-        const description = document.createElement('span');
-        description.textContent = doc.description;
+        const description = document.createElement('div');
+
+        var match = (doc.title + " - " + doc.description + " - " + doc.content)
+          .replace(/<\/?[^>]+>/gi, ' ')
+          .replace(/(\r\n|\n|\r)/gi, "")
+          .match(regex_scope);
+        try {
+          match[0] = "..." + match[0];
+          description.innerHTML = match.join(" ... ").slice(0, 100)
+          .replace(regex, (match) => `<strong>${match}</strong>`);
+        } catch (e) {
+          description.textContent = doc.description;
+        }
+
         description.classList.add("suggestion__description");
         a.appendChild(description);
 

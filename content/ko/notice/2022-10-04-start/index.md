@@ -1,0 +1,66 @@
+---
+title : "2022년도 ML/DL 중급 SIG 시작"
+description: "2022년도 SIG 활동이 시작되었습니다."
+date: 2022-10-04T00:00:00+09:00
+lastmod: 2022-10-04T00:00:00+09:00
+draft: false
+weight: 50
+images: []
+contributors: ["이경원"]
+pinned: false
+homepage: false
+---
+
+## 진행
+
+- 매주 화요일 8시 반 관정도서관 그룹스터디룸 + 줌 (하이브리드), 세부사항은 아래 [일정](#일정) 참고
+- 한 세미나에 3분 씩, 한 학기 동안 총 2번의 발표
+- SCSC 회원에게도 공개
+
+## Zoom Link
+
+TBA
+
+## 규칙
+
+- 대면 참여해주시면 좋다
+- 세미나 20분 정도 준비해오기 (더 짧아도 됨)
+
+## 주제
+
+- 자유 주제, 주제 선택에 어려움이 있을 경우 <딥러닝의 최신 트렌드 (추형석)>의 목차 참고
+- 학술적인 내용이 아닌 스타트업이나 ML/DL 관련 프로덕트들도 좋음
+
+## 구성원
+
+- [김윤식](https://github.com/yoonshik1205)
+- [이경원](https://github.com/kw-lee)
+- [최필립](https://github.com/pswcsj)
+- [유상훈](https://github.com/sanghoonnam)
+- [**최민동**](https://github.com/orange-fritters)
+- [임서영](https://github.com/xxbelight)
+- [최재영](https://github.com/Jaeyoung-Choi)
+- [구진모](https://github.com/linear0127)
+
+## 일정
+
+| 주  | 일시             | 장소             |  발표자 및 주제                                                                                                                         |
+| --- | ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| 0   | 2022년 10월 4일  | 관정도서관 216호 | 진행 회의                                                                                                                               |
+| 1   | 2022년 10월 11일 | 관정도서관 216호 | 최민동: "파이토치 메모리 슈퍼세이브"<br>임서영: "Understanding Contrastive Machine Learning - CVAE"<br>이경원: "머신러닝과 통계적 추론" |
+| 2   | 2022년 11월 1일  | TBA              | TBA                                                                                                                                     |
+| 3   | 2022년 11월 8일  | TBA              | TBA                                                                                                                                     |
+| 4   | 2022년 11월 15일 | TBA              | TBA                                                                                                                                     |
+| 5   | TBA              | TBA              | TBA                                                                                                                                     |
+| 6   | TBA              | TBA              | TBA                                                                                                                                     |
+
+## 홈페이지
+
+* 홈페이지 주소는 [https://SNU-SCSC.github.io/22F-MLDL-intermediate/](https://SNU-SCSC.github.io/22F-MLDL-intermediate/) 입니다.
+* 소스코드는 `gh-pages-src` 브랜치에서 관리됩니다.
+* hugo [doks template](https://github.com/h-enk/doks)에 기반하여 작성됩니다.
+* 참고하면 좋은 문서:
+  * hugo 관련: [hugo documentation](https://gohugo.io/documentation/)
+  * doks 관련: [doks documentation](https://getdoks.org)
+  * html, css, javascript 관련: [w3schools](https://www.w3schools.com)
+  * 기타 모든 것: [https://google.com](https://google.com)

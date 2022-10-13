@@ -1,0 +1,43 @@
+{{ define "main" }}
+	<div class="row justify-content-center text-center">
+		{{ if ne .Params.toc false -}}
+		<nav class="docs-toc{{ if ne .Site.Params.options.navbarSticky true }} docs-toc-top{{ end }} d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+			{{ partial "sidebar/docs-toc.html" . }}
+		</nav>
+		{{ end -}}
+		{{ if .Params.toc -}}
+		<main class="docs-content col-lg-11 col-xl{{ if eq .Site.Params.options.fullWidth false }}-9{{ end }}">
+		{{ else -}}
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		{{ end -}}
+			{{ if .Site.Params.options.breadCrumb -}}
+				<!-- https://discourse.gohugo.io/t/breadcrumb-navigation-for-highly-nested-content/27359/6 -->
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb">
+						{{ partial "main/breadcrumb" . -}}
+						<li class="breadcrumb-item active" aria-current="page">{{ .Title }}</li>
+					</ol>
+				</nav>
+			{{ end }}
+
+      <h1 class="text-center">
+        {{.Title}}
+      </h1>
+
+      <div class="text-center">{{ .Content }}</div>
+      <div class="card-list">
+        {{ $currentSection := .CurrentSection }}
+        {{ $subpages := .Pages.ByWeight }}
+        {{ range where $subpages "Section" .Section }}
+          {{ if in (.RelPermalink | string) $currentSection.RelPermalink }}
+            <div class="card my-3">
+              <div class="card-body">
+                <a class="stretched-link" href="{{ .RelPermalink }}">{{ .Params.title | title }} &rarr;</a>
+              </div>
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+		</main>
+	</div>
+{{ end }}
