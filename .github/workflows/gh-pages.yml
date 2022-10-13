@@ -8,12 +8,9 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [16.x, 18.x]
+    runs-on:
+      os: ubuntu-latest
+      node: 16.x
 
     steps:
     - name: Check out Hyas project
