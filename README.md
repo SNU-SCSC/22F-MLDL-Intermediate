@@ -65,7 +65,7 @@ SCSC 2022년도 2학기 머신러닝/딥러닝 중급 SIG
 
 ## 홈페이지
 
-* 홈페이지 주소는 [https://SNU-SCSC.github.io/22F-MLDL-intermediate/](https://SNU-SCSC.github.io/22F-MLDL-intermediate/) 입니다.
+* 홈페이지 주소는 [https://snu-scsc.github.io/22F-MLDL-intermediate/](https://snu-scsc.github.io/22F-MLDL-intermediate/) 입니다.
 * 소스코드는 `gh-pages-src` 브랜치에서 관리됩니다.
 * hugo [doks template](https://github.com/h-enk/doks)에 기반하여 작성됩니다.
 * 참고하면 좋은 문서:

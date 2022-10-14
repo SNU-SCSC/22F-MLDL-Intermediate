@@ -1,4 +1,4 @@
-baseurl = "https://SNU-SCSC.github.io/22F-MLDL-Intermediate"
+baseurl = "https://snu-scsc.github.io/22F-MLDL-Intermediate"
 canonifyURLs = false
 RelativeURLs = false
 disableAliases = true

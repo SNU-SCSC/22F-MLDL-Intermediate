@@ -1,11 +1,17 @@
 {{ $baseURL := .Site.BaseURL | absURL -}}
 {{ $fileURL := .Get "url" }}
+{{ $fileURL := print $baseURL $fileURL }}
 {{ $pdfType := .Get "type" }}
 {{ $ratio := .Get "ratio" | int | add 1.5 }}
 <link rel="stylesheet" type="text/css" href="{{ print $baseURL "/css/embed-pdf.css" }}">
 
 <!-- ratio: xx% = height / width -->
 
+<figure style="width: 100%; height: 100%">
 <div class="pdf-container {{ $pdfType }}" {{ if $ratio }}style="padding-top: {{ print $ratio "%" }};"{{ end }}>
-  <iframe src='{{ print $baseURL $fileURL }}' class='responsive-iframe' type="application/pdf" style="width:100%;"></iframe>
+  <iframe src='{{ $fileURL }}' class='responsive-iframe' type="application/pdf" style="width:100%;"></iframe>
 </div>
+<figcaption class="figure-caption" style="font-size: large;"><a href="{{ $fileURL }}">파일 다운로드</a></figcaption>
+</figure>
+
+<!-- to do: change module (it does not work at iPhone) -->
