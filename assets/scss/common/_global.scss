@@ -279,7 +279,7 @@ body {
 
 .card-bar {
   border-top: 4px solid;
-  border-image-source: $pride;
+  border-image-source: $primary-bar;
   border-image-slice: 1;
 }
 
@@ -325,7 +325,7 @@ body {
 }
 
 .main-gate {
-  background-image: $pride;
+  background-image: $primary-bar;
   background-color: #fff !important;
 
   --bs-btn-bg: #fff !important;

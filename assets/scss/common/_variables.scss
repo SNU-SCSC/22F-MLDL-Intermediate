@@ -39,6 +39,12 @@ $pride: linear-gradient(
 
 $primary: $trans-blue-for-light;
 
+$primary-bar: linear-gradient(
+  90deg,
+  $primary,
+  $trans-blue-for-light
+);
+
 $color-btn-bg: $trans-blue-for-light;
 $color-btn-border: darken($trans-blue-for-light, 5%);
 $color-btn-text: $white;
