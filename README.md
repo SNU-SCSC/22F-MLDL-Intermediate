@@ -52,15 +52,16 @@ SCSC 2022년도 2학기 머신러닝/딥러닝 중급 SIG
 
 ## 일정
 
-| 주  | 일시             | 장소             |  발표자 및 주제                                                                                                                         |
-| --- | ---------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| 0   | 2022년 10월 4일  | 관정도서관 216호 | 진행 회의                                                                                                                               |
-| 1   | 2022년 10월 11일 | 관정도서관 216호 | 임서영: "Understanding Contrastive Machine Learning - CVAE"<br>이경원: "머신러닝과 통계적 추론"|                                                                                                                                   |
-| 2   | 2022년 11월 1일  | 관정도서관 206호 | 최민동: "파이토치 메모리 슈퍼세이브" <br>최필립: "유넷 논문 리뷰"|
-| 3   | 2022년 11월 15일 | 관정도서관 216호 | 원준희: "DALL-E 2 분석" <br>최재영: "딥러닝 하드웨어 가속"|                                                                                                                                    |
-| 4   | 2022년 11월 22일 | TBA           | 최민동: "Understanding Graph Neural Networks" <br>임서영: "A gentle Introduction to Generative Adversarial Network (GANs) "|                                                                                                                                     |
-| 5   | TBA             | TBA              | TBA                                                                                                                                     |
+| 주  | 일시            | 장소         | 발표자 및 주제                                                                                                              |
+| --- |---------------|------------|-----------------------------------------------------------------------------------------------------------------------|
+| 0   | 2022년 10월 4일  | 관정도서관 216호 | 진행 회의                                                                                                                 |
+| 1   | 2022년 10월 11일 | 관정도서관 216호 | 임서영: "Understanding Contrastive Machine Learning - CVAE"<br>이경원: "머신러닝과 통계적 추론"                                       |                                                                                                                                   |
+| 2   | 2022년 11월 1일  | 관정도서관 206호 | 최민동: "Pytorch Memory Supersave" <br>최필립: "Review on UNet Paper"                                                       |
+| 3   | 2022년 11월 15일 | 관정도서관 216호 | 원준희: "DALL-E 2 분석" <br>최재영: "Deep Learning Hardware Acceleration"                                                     |                                                                                                                                    |
+| 4   | 2022년 11월 22일 | 관정도서관 215호 | 최민동: "Understanding Graph Neural Networks" <br>임서영: "A gentle Introduction to Generative Adversarial Network (GANs) " |                                                                                                                                     |
+| 5   | 2022년 11월 29일 | 관정도서관 216호 | 최필립: "Introduction to Flow-Based Deep Generation Models" <br>김윤식: "Transformer Model"                                 |
 
 ## 공지사항
 
 - 10월 18일, 25일은 중간고사 일정으로 세미나를 진행하지 않습니다.
+- 12월 6일, 13일은 기말고사 일정으로 세미나를 진행하지 않습니다.
